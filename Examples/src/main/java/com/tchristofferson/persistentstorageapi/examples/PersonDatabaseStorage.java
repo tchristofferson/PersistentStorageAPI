@@ -1,10 +1,10 @@
 package com.tchristofferson.persistentstorageapi.examples;
 
-import com.tchristofferson.persistentstorageapi.Storage;
+import com.tchristofferson.persistentstorageapi.SingleStorage;
 
 import java.sql.*;
 
-public class PersonDatabaseStorage implements Storage<Person, String> {
+public class PersonDatabaseStorage implements SingleStorage<Person, String> {
 
     private static final String TABLE = "PEOPLE";
     private static final String SSN_COLUMN = "ssn";

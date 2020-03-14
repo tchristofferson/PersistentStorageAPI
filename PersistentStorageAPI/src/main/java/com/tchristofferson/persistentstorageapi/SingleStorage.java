@@ -2,10 +2,10 @@ package com.tchristofferson.persistentstorageapi;
 
 /**
  * Represents a means of storage such as a file or a database
- * T represents the type of object this Storage is for
- * I Represents the type of object used as a unique identifier for object T
+ * @param <T> represents the type of object this Storage is for
+ * @param <I> represents the type of object used as a unique identifier for object T
  */
-public interface Storage<T, I> {
+public interface SingleStorage<T, I> extends Savable<T> {
 
     /**
      * Retrieve an object from storage
@@ -13,13 +13,6 @@ public interface Storage<T, I> {
      * @return Return the object with the specified identifier, or {@code null} if not found
      */
     T get(I identifier) throws Exception;
-
-    /**
-     * Save specified object to storage
-     * @param obj The object to save
-     * @throws Exception if there was an error
-     */
-    void save(T obj) throws Exception;
 
     /**
      * Update a pre-existing object in storage

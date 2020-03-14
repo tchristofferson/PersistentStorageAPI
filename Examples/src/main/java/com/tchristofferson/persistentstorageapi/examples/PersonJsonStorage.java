@@ -4,12 +4,12 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.tchristofferson.persistentstorageapi.Storage;
+import com.tchristofferson.persistentstorageapi.SingleStorage;
 
 import java.io.*;
 import java.util.Map;
 
-public class PersonJsonStorage implements Storage<Person, String> {
+public class PersonJsonStorage implements SingleStorage<Person, String> {
 
     private final File file;
     private final Gson gson;
