@@ -8,7 +8,7 @@ public interface DualIdentifierStorage<T, I1, I2> extends Savable<T> {
      * @param identifier2 The second of 2 unique identifiers to identify the object in storage
      * @return Return the object with the specified identifiers, or {@code null} if not found
      */
-    T get(I1 identifier1, I2 identifier2);
+    T get(I1 identifier1, I2 identifier2) throws Exception;
 
     /**
      * Update a pre-existing object in storage
@@ -24,6 +24,6 @@ public interface DualIdentifierStorage<T, I1, I2> extends Savable<T> {
      * @param identifier1 The first of 2 unique identifiers to identify the object in storage
      * @param identifier2 The second of 2 unique identifiers to identify the object in storage
      */
-    void delete(I1 identifier1, I2 identifier2);
+    void delete(I1 identifier1, I2 identifier2) throws Exception;
 
 }
