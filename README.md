@@ -5,7 +5,7 @@ API for easily changing between saving to file, database, etc.
 ```
 <repository>
   <id>maven-central</id>
-  <url>https://oss.sonatype.org/content/groups/public/</url>
+  <url>https://oss.sonatype.org/content/repositories/snapshots</url>
 </repository>
 ```
 ```
